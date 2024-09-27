@@ -1,4 +1,4 @@
-#1. Cubos: Un número elevado a la tercera potencia es un cubo. Grafica los primeros cinco
+    #1. Cubos: Un número elevado a la tercera potencia es un cubo. Grafica los primeros cinco
 #números cúbicos y luego grafica los primeros 5000 números cúbicos.
 
 #2. Cubos Coloreados: Aplica un mapa de colores a tu gráfico de cubos.
