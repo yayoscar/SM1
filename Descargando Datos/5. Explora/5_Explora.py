@@ -28,28 +28,7 @@ with open(nombre_archivo) as archivo:
             bajas.append(baja)
             precipitaciones.append(precipitacion)
 
-# Gráfico de temperaturas máximas y mínimas
-plt.figure(figsize=(10, 5))
-plt.plot(fechas, altas, label='Temperatura Máxima', color='red')
-plt.plot(fechas, bajas, label='Temperatura Mínima', color='blue')
-plt.fill_between(fechas, altas, bajas, color='lightgray', alpha=0.5)
-plt.title("Temperaturas máximas y mínimas diarias - 2018\nDeath Valley, CA")
-plt.xlabel("Fecha")
-plt.ylabel("Temperatura (°F)")
-plt.legend()
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
 
-# Gráfico de precipitación
-plt.figure(figsize=(10, 5))
-plt.bar(fechas, precipitaciones, color='blue', alpha=0.7)
-plt.title("Precipitación diaria - 2021\nDeath Valley, CA")
-plt.xlabel("Fecha")
-plt.ylabel("Precipitación (pulgadas)")
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
 
 # Gráfico de dispersión entre temperaturas máximas y mínimas
 plt.figure(figsize=(10, 5))
@@ -60,11 +39,3 @@ plt.ylabel("Temperatura Mínima (°F)")
 plt.tight_layout()
 plt.show()
 
-# Histograma de temperaturas máximas
-plt.figure(figsize=(10, 5))
-plt.hist(altas, bins=20, color='orange', alpha=0.7)
-plt.title("Distribución de Temperaturas Máximas - 2021\nDeath Valley, CA")
-plt.xlabel("Temperatura Máxima (°F)")
-plt.ylabel("Frecuencia")
-plt.tight_layout()
-plt.show()
