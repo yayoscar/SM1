@@ -31,7 +31,7 @@ def leer_datos(nombre_archivo):
 
     return fechas, altas, bajas, nombre_estacion
 
-nombre_archivo='C:\\Users\\mala7\\Downloads\\primer semestre- Olan\\primer semestre- Olan\\Descargando_datos\\data\\sitka_weather_2021_full.csv'
+nombre_archivo='SM1/Descargando Datos/data/sitka_weather_2021_full.csv'
 with open(nombre_archivo) as archivo:
     # Creamos un objeto lector para leer el objeto csv
     lector = csv.reader(archivo)

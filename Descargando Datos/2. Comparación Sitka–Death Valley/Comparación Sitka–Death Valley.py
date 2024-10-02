@@ -2,8 +2,8 @@ import csv
 from datetime import datetime
 import  matplotlib.pyplot as plt
 
-nombre_archivo = 'C:\\Users\\mala7\\Downloads\\primer semestre- Olan\\primer semestre- Olan\\Descargando_datos\\data\\death_valley_2021_full.csv'
-nombre_archivo_2 = 'C:\\Users\\mala7\\Downloads\\primer semestre- Olan\\primer semestre- Olan\\Descargando_datos\\data\\sitka_weather_2021_full.csv'
+nombre_archivo='SM1/Descargando Datos/data/death_valley_2021_full.csv'
+nombre_archivo_2='SM1/Descargando Datos/data/sitka_weather_2021_full.csv'
 #Abrir archivo
 
 with open(nombre_archivo) as archivo:
