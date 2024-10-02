@@ -30,10 +30,8 @@ class Random_walk:
 rw=Random_walk()
 rw.rellenar_caminata()
 
-plt.style.use('seaborn')
-
 fig,ax =plt.subplots()
-ax.plot(rw.valores_x,rw.valores_y,c="Yellow",linewidth=0.8)
+ax.plot(rw.valores_x,rw.valores_y,c="grey",linewidth=0.8)
 
 
 ax.set_title("Pasos aleatorios", fontsize=24, color='Red')

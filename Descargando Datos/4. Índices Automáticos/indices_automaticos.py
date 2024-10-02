@@ -32,8 +32,8 @@ def leer_datos(nombre_archivo):
     return fechas, altas, bajas, nombre_estacion
 
 # Leer los datos de ambos archivos
-nombre_archivo_1 = '/Users/pattu/Desktop/5to SEMESTRE/Descargando_datos/data/death_valley_2021_full.csv'
-nombre_archivo_2 = '/Users/pattu/Desktop/5to SEMESTRE/Descargando_datos/data/sitka_weather_2021_full.csv'
+nombre_archivo_1 = 'Descargando datos/data/death_valley_2021_full.csv'
+nombre_archivo_2 = 'Descargando datos/data/sitka_weather_2021_full.csv'
 
 fechas_1, altas_1, bajas_1, nombre_estacion_1 = leer_datos(nombre_archivo_1)
 fechas_2, altas_2, bajas_2, nombre_estacion_2 = leer_datos(nombre_archivo_2)

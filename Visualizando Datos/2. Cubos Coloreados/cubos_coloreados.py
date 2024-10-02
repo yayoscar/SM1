@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 
-plt.style.use('seaborn')
-
 Valores_x = range(1,5001)
 Valores_y = [x**3 for x in Valores_x]
 

@@ -1,6 +1,4 @@
-"""import matplotlib.pyplot as plt
-
-plt.style.use('seaborn')
+import matplotlib.pyplot as plt
 
 Valores_x = range(1,5001)
 Valores_y = [x**3 for x in Valores_x]
@@ -17,5 +15,3 @@ ax.tick_params(axis="both", labelsize=14)
 
 plt.show()
 
-"""
-print(23)
