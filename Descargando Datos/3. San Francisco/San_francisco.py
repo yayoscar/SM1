@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 import  matplotlib.pyplot as plt
 
-nombre_archivo= '/Users/pattu/Desktop/5to SEMESTRE/Descargando_datos/data/sanfrancisco.csv'
+nombre_archivo= 'Descargando Datos/data/sanfrancisco.csv'
 
 #Abrir archivo
 
@@ -36,7 +36,7 @@ with open(nombre_archivo) as archivo:
 
 
 #Crear un grafico de las temperaturas máximas
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 
 fig, ax = plt.subplots()
 ax.plot(Fechas,Altas, c= 'red',linewidth=0.4, label="Altas")
