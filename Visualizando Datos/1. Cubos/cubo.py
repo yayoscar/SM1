@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # Generar los primeros cinco números cúbicos
-x_5 = list(range(1, 6))
+x_5 = list(range(1,6))
 y_5 = [n**3 for n in x_5]
 
 # Generar los primeros 5000 números cúbicos

@@ -9,7 +9,7 @@ dado3=Dado()
 Resultados=[]
 Frecuencia=[]
 
-for i in range(1000):Resultados.append(dado1.lanzar() + dado2.lanzar() + dado3.lanzar())
+for i in range(1000):Resultados.append(dado1.lanzar() + dado2.lanzar() + dado3.lanzar() )
 
 maximo_resultado = dado1.caras + dado2.caras + dado3.caras
 

@@ -5,7 +5,7 @@ x_5000 = list(range(1, 5001))
 y_5000 = [n**3 for n in x_5000]
 
 # Crear la figura
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10,6))
 
 # Aplicar el mapa de colores (colormap) usando scatter
 plt.scatter(x_5000, y_5000, c=y_5000, cmap='viridis', s=10, edgecolor='none')

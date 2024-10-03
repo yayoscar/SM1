@@ -10,7 +10,7 @@ class Random_walk:
     
     def obtener_paso(self,list):
         direccion=choice([1,-1])
-        distancia=choice([0,1,2,3,4])
+        distancia=choice([0,1,2,3, 4])
         paso=direccion*distancia
 
         a = list[-1] + paso

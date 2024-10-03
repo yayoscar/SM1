@@ -10,7 +10,7 @@ class Random_walk:
         
     def rellenar_caminata(self):
         while len(self.valores_x) < self.num_puntos:
-            direccion_x=choice([1,-1])
+            direccion_x=choice([1,-1] )
             distancia_x=choice([0,1,2,3,4])
             paso_x=direccion_x*distancia_x
 

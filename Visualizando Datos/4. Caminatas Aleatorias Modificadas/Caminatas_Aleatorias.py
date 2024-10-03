@@ -13,7 +13,7 @@ class RandomWalk:
         while len(self.x_values) < self.num_points:
             # Elige la dirección y la distancia para el eje x.
             x_direction = random.choice([1, -1])  # Puedes eliminar el -1 si quieres solo una dirección.
-            x_distance = random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8])
+            x_distance = random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8] )
             x_step = x_direction * x_distance
 
             # Elige la dirección y la distancia para el eje y.
