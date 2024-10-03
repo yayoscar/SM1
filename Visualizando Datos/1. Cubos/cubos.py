@@ -7,9 +7,9 @@ y_small=x_small ** 3
 plt.figure(figsize=(7, 6))
 #Graficar los primeros 5 números cúbicos
 scatter1 = plt.scatter(x_small, y_small,c=y_small,cmap='viridis')
-plt.title('Primeros 5 números cúbicos')
+plt.title('Primeros 5 números cúbicos' )
 plt.xlabel('Número')
 plt.ylabel('Cubo del número')
-plt.colorbar(scatter1,label='Valor del Cubo')
+plt.colorbar(scatter1,label='Valor del Cubo' )
 #Mostrar la gráfica
 plt.show()

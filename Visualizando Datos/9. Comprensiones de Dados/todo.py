@@ -7,10 +7,10 @@ def graficar_cubos():
     x_values = [1, 2, 3, 4, 5]
     y_values = [x**3 for x in x_values]
     
-    plt.style.use('seaborn-v0_8')
+    plt.style.use('seaborn-v0_8' )
     fig, ax = plt.subplots()
-    ax.plot(x_values, y_values, linewidth=3)
-    ax.set_title("Primeros cinco números cúbicos", fontsize=24)
+    ax.plot(x_values, y_values, linewidth=3 )
+    ax.set_title("Primeros cinco números cúbicos",fontsize=24)
     ax.set_xlabel("Valor", fontsize=14)
     ax.set_ylabel("Cubo del valor", fontsize=14)
     plt.show()

@@ -34,4 +34,4 @@ configuracion_eje_y={'title':'Frecuencia del resultado'}
 configuracion=Layout(title='Resultados del lanzamiento de 3 dados', xaxis=configuracion_eje_x, yaxis=configuracion_eje_y)
 offline.plot({'data':datos, 'layout':configuracion}, filename='dado_visual.html')
 xaxis=configuracion_eje_x,yaxis=configuracion_eje_y
-offline.plot({'data':datos, 'layout':configuracion}, filename='dado_visual.html')
+offline.plot({'data':datos, 'layout':configuracion}, filename='dado_visual.html' )

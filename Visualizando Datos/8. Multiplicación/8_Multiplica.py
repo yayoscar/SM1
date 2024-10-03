@@ -16,6 +16,6 @@ ax.bar(valores_x, frecuencias, width=0.8, color='blue')
 
 # Configuración del gráfico
 ax.set_title("Resultados de la Multiplicación de Dos Dados D6", fontsize=20)
-ax.set_xlabel("Producto de los dos dados", fontsize=15)
+ax.set_xlabel("Producto de los dos dados", fontsize=15 )
 ax.set_ylabel("Frecuencia", fontsize=15)
 plt.show()

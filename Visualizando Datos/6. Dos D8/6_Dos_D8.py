@@ -7,7 +7,7 @@ class Dado:
         self.lados = lados
 
     def lanzar(self):
-        return random.randint(1, self.lados)
+        return random.randint(1, self.lados )
 
 # Crear dos dados de 8 caras
 dado1 = Dado()

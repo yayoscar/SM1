@@ -3,7 +3,7 @@ from random import choice  # Asegúrate de importar la función choice
 
 # Modificar las listas en la clase RandomWalk para direcciones y distancias
 class RandomWalkModificado:
-    def __init__(self, num_puntos=5000):
+    def __init__(self, num_puntos=5000 ):
         self.num_puntos = num_puntos
         self.valores_x = [0]
         self.valores_y = [0]

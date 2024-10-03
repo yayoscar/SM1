@@ -3,7 +3,7 @@ from random import choice  # Importa la función choice desde el módulo random
 
 # Clase refactorizada para la caminata aleatoria
 class RandomWalkRefactorizado:
-    def __init__(self, num_puntos=5000):
+    def __init__(self, num_puntos=5000 ):
         self.num_puntos = num_puntos
         self.valores_x = [0]
         self.valores_y = [0]
