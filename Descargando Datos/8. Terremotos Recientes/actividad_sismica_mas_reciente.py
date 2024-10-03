@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import plotly.express as px
 
-nombre_archivo = Path("JSON/data/data/teremotos_7dias_atras.geojson")
+nombre_archivo = Path("Descargando Datos/data/eq_data_7_day_m1.geojson")
 contenido = nombre_archivo.read_text()
 todos_datos = json.loads(contenido)
 
