@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # Leer el archivo CSV
-archivo_incendios =('SM1/Descargando Datos/data/world_fires_1_day.csv')
+archivo_incendios =('SM1/Descargando Datos/data/world_fires_1_day.csv' )
 datos_incendios = pd.read_csv(archivo_incendios)
 
 # Asegurarnos de que la columna 'brightness' sea de tipo numérico y eliminar NaN

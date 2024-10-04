@@ -8,7 +8,7 @@ nombre_archivo_2='SM1/Descargando Datos/data/sitka_weather_2021_full.csv'
 
 with open(nombre_archivo) as archivo:
     #Creamos Un objeto lector para leer el objeto csv
-    lector = csv.reader(archivo)
+    lector = csv.reader(archivo )
 
     #Leer los encabezaados de la primera linea
     Fila_encabezado = next(lector)

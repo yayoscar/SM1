@@ -9,7 +9,7 @@ with open(nombre_archivo) as archivo:
     # Obtener las fechas y las temperaturas máximas de este archivo.
     fechas,precipitaciones = [],[]
     for fila in lector:
-        fecha_actual = datetime.strptime(fila[2], '%Y-%m-%d')
+        fecha_actual = datetime.strptime(fila[2], '%Y-%m-%d' )
         try:
             precipitacion = int(fila[4])
         except ValueError:

@@ -3,7 +3,7 @@ from pathlib import Path
 import plotly.express as px
 
 # Cargar y leer el archivo GeoJSON
-nombre_archivo = Path('SM1/Descargando Datos/data/eq_data_30_day_m1.geojson')
+nombre_archivo = Path('SM1/Descargando Datos/data/eq_data_30_day_m1.geojson' )
 contenido = nombre_archivo.read_text()
 todos_datos = json.loads(contenido)
 

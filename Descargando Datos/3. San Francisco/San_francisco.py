@@ -11,7 +11,7 @@ with open(nombre_archivo) as archivo:
     lector = csv.reader(archivo)
 
     #Leer los encabezaados de la primera linea
-    Fila_encabezado = next(lector)
+    Fila_encabezado = next(lector )
 
     #Obtener las temperaturas de la columna con indice 5 TMAX
     Altas,Fechas,Bajas = [],[],[]

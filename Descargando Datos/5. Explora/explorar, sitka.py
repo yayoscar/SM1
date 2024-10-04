@@ -9,7 +9,7 @@ def leer_datos(nombre_archivo):
         Fila_encabezado = next(lector)
         
         # Determinar los índices de las columnas TMAX y TMIN
-        indice_fecha = Fila_encabezado.index('DATE')
+        indice_fecha = Fila_encabezado.index('DATE' )
         indice_max = Fila_encabezado.index('TMAX')
         indice_min = Fila_encabezado.index('TMIN')
         indice_nombre_estacion = Fila_encabezado.index('NAME')
