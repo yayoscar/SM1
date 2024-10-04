@@ -1,5 +1,4 @@
-
-import panda as pd
+import pandas as pd
 import plotly.express as px
 
 # Leer el archivo CSV

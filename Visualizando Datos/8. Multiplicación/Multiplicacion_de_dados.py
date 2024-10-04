@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from Dado import Dado
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 dado1=Dado()
 dado2=Dado()
 
@@ -32,3 +32,4 @@ ax.tick_params(axis="both", labelsize=14)
 
 plt.show()
 
+"""Ya estan todos de antemano modificados"""

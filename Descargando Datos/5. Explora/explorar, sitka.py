@@ -21,7 +21,7 @@ def leer_datos(nombre_archivo):
             try:
                 alta = int(fila[indice_max])
                 baja = int(fila[indice_min])
-                nombre_estacion = fila[indice_nombre_estacion]  # Obtener el nombre de la estación
+                nombre_estacion = fila[indice_nombre_estacion]  
             except ValueError:
                 print(f"Datos faltantes para {fecha_actual}")
             else:

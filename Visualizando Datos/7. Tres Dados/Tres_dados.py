@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from Dado import Dado
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 dado1=Dado()
 dado2=Dado()
 dado3=Dado()

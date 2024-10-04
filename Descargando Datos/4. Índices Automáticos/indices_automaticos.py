@@ -2,6 +2,7 @@ import csv
 from datetime import datetime
 import matplotlib.pyplot as plt
 
+
 def leer_datos(nombre_archivo):
     """Lee los datos de temperatura desde un archivo CSV."""
     with open(nombre_archivo) as archivo:

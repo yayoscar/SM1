@@ -29,7 +29,7 @@ class Random_walk:
 rw=Random_walk()
 rw.rellenar_caminata()
 
-plt.style.use('seaborn')
+plt.style.use('seaborn-v0_8')
 
 fig,ax =plt.subplots()
 ax.scatter(rw.valores_x,rw.valores_y,s=10,c="Red")

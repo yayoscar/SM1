@@ -16,7 +16,7 @@ for x in range(20):
         even_numbers.append(x)
 
 # Comprensión de lista
-even_numbers = [x for x in range(20) if x % 2 == 0 ]
+even_numbers = [x for x in range(20) if x % 2 == 0]
 print("Números pares:", even_numbers)
 
 # Ejemplo 3: Convertir una lista de cadenas a mayúsculas

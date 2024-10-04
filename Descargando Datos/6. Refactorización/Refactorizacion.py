@@ -6,7 +6,7 @@ nombre_archivo = Path("Descargando Datos/data/eq_data_7_day_m1.geojson")
 contenido = nombre_archivo.read_text()
 todos_datos = json.loads(contenido)
 
-# Examinar todos los terremotos a partir de la clave 'features'
+# Examinar todos los terremotos a partir de la clave 
 Terremotos_dic = todos_datos["features"]
 
 # Extraer los datos en un bucle reducido a cuatro líneas
