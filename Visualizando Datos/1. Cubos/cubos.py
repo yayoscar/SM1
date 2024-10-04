@@ -1,19 +1,22 @@
 import matplotlib.pyplot as plt
 
-plt.style.use('seaborn')
+# Lista de datos a graficar valores de entrada y cubos de los valores
+valores_entrada = [1, 2, 3, 4, 5]
+cubos = [1, 4, 9, 16, 25]
 
-Valores_x = range(1,5001)
-Valores_y = [x**3 for x in Valores_x]
+# Crear la figura y los ejes
+fig,ax=plt.subplots()
 
-fig,ax =plt.subplots()
-ax.scatter(Valores_x,Valores_y,c='Green',s=35)
-ax.plot(Valores_x,Valores_y)
+# Graficar los datos y ajustar el ancho de la linea
+ax.plot(valores_entrada, cubos,linewidth=5)
 
-ax.set_title("Cuadrados", fontsize=24, color='Red')
-ax.set_xlabel("Valor", fontsize=14, color='Red')
-ax.set_ylabel("Cuadrado de valor", fontsize=14,color='Red')
+# Establecer título del gráfico y etiquetas de los ejes
+ax.set_title("Números Cubos", fontsize=24)
+ax.set_xlabel("Valor", fontsize=14)
+ax.set_ylabel("Cubos del Valor", fontsize=14)
 
-ax.tick_params(axis="both", labelsize=14)
+# Ajustar el tamaño de las etiquetas de las marcas de los ejes
+ax.tick_params(axis='both', labelsize=14)
 
+# Mostrar la gráfica
 plt.show()
-

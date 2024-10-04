@@ -34,7 +34,6 @@ def leer_datos(nombre_archivo):
 # Leer los datos de ambos archivos
 nombre_archivo_1 = 'Descargando Datos/data/death_valley_2021_full.csv'
 nombre_archivo_2 = 'Descargando Datos/data/sitka_weather_2021_full.csv'
-
 fechas_1, altas_1, bajas_1, nombre_estacion_1 = leer_datos(nombre_archivo_1)
 fechas_2, altas_2, bajas_2, nombre_estacion_2 = leer_datos(nombre_archivo_2)
 
