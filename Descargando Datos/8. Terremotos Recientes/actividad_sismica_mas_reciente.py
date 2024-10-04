@@ -2,15 +2,15 @@ import json
 from pathlib import Path
 import plotly.express as px
 
-nombre_archivo = Path('Descargando Datos/data/teremotos_7dias_atras.geojson')
+nombre_archivo = Path("Descargando Datos/data/eq_data_7_day_m1.geojson")
 contenido = nombre_archivo.read_text()
 todos_datos = json.loads(contenido)
 
 # Examinar todos los terremotos a partir de la clave 'features'
 Terremotos_dic = todos_datos["features"]
 
-# Extraer los datos en un bucle reducio a cuatro líneas
-magnitudes = [dicc_terremoto["propertiesd"]["mag"] for dicc_terremoto in Terremotos_dic]
+# Extraer los datos en un bucle reducido a cuatro líneas
+magnitudes = [dicc_terremoto["properties"]["mag"] for dicc_terremoto in Terremotos_dic]
 longitudes = [dicc_terremoto["geometry"]["coordinates"][0] for dicc_terremoto in Terremotos_dic]
 latitudes = [dicc_terremoto["geometry"]["coordinates"][1] for dicc_terremoto in Terremotos_dic]
 titulos_terremotos = [dicc_terremoto["properties"]["title"] for dicc_terremoto in Terremotos_dic]

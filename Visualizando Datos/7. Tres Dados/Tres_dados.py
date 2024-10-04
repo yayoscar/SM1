@@ -4,13 +4,14 @@ from Dado import Dado
 plt.style.use('seaborn')
 dado1=Dado()
 dado2=Dado()
+dado3=Dado()
 
 Resultados=[]
 Frecuencia=[]
 
-for i in range(1000):Resultados.append(dado1.lanzar() * dado2.lanzar())
+for i in range(1000):Resultados.append(dado1.lanzar() + dado2.lanzar() + dado3.lanzar())
 
-maximo_resultado = dado1.caras + dado2.caras
+maximo_resultado = dado1.caras + dado2.caras + dado3.caras
 
 for Valor in range(2,maximo_resultado+1):Frecuencia.append(Resultados.count(Valor))
 

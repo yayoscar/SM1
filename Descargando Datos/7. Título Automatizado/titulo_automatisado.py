@@ -2,9 +2,13 @@ import json
 from pathlib import Path
 import plotly.express as px
 
-nombre_archivo = Path("Descargando Datos/data/eq_data_7_day_m1.geojson")
+# Cargar y leer el archivo GeoJSON
+nombre_archivo = Path("Descargando Datos/data/eq_data_30_day_m1.geojson")
 contenido = nombre_archivo.read_text()
 todos_datos = json.loads(contenido)
+
+# Extraer el título del conjunto de datos desde los metadatos
+titulo = todos_datos["metadata"]["title"]
 
 # Examinar todos los terremotos a partir de la clave 'features'
 Terremotos_dic = todos_datos["features"]
@@ -19,8 +23,7 @@ print(magnitudes[:10])
 print(longitudes[:10])
 print(latitudes[:10])
 
-# Crear y mostrar el mapa
-titulo = "Mapa de terremotos"
+# Crear y mostrar el mapa con el título extraído de los metadatos
 fig = px.scatter_geo(
     lat=latitudes,
     lon=longitudes,
