@@ -31,44 +31,35 @@ def leer_datos(nombre_archivo):
 
     return fechas, altas, bajas, nombre_estacion
 
-nombre_archivo='Descargando Datos/data/sitka_weather_2021_full.csv'
+# Leer los datos de ambos archivos
+nombre_archivo_1 = 'Descargando datos\\data\\death_valley_2021_full.csv'
+nombre_archivo_2 = 'Descargando datos\\data\\sitka_weather_2021_full.csv'
+fechas_1, altas_1, bajas_1, nombre_estacion_1 = leer_datos(nombre_archivo_1)
+fechas_2, altas_2, bajas_2, nombre_estacion_2 = leer_datos(nombre_archivo_2)
 
-with open(nombre_archivo) as archivo:
-    #Creamos Un objeto lector para leer el objeto csv
-    lector = csv.reader(archivo)
-
-    #Leer los encabezaados de la primera linea
-    Fila_encabezado = next(lector)
-
-    altas,fechas,bajas= [],[],[]
-    for fila in lector:
-        fecha_actual= datetime.strptime(fila[2], '%Y-%m-%d')
-        try:
-            alta_ = int(fila[7])
-            Baja_ = int(fila[8])
-        except ValueError:
-            print(f"Datos faltantes para {fecha_actual} sitka")
-        else:
-            fechas.append(fecha_actual)
-            altas.append(alta_)
-            bajas.append(Baja_)
-
+# Crear el gráfico de las temperaturas
 plt.style.use('seaborn-v0_8')
-
 fig, ax = plt.subplots()
-ax.plot(fechas, altas, c='Red', linewidth=0.8, label=f"Máximas")
-ax.plot(fechas, bajas, c='Blue', linewidth=0.8, label=f"Mínimas")
-ax.legend(loc='upper right', fontsize=10)
-plt.fill_between(fechas, altas, bajas, facecolor='Purple', alpha=0.4)
 
+# Graficar los datos de la primera estación
+ax.plot(fechas_1, altas_1, c='Red', linewidth=0.8, label=f"Máximas {nombre_estacion_1}")
+ax.plot(fechas_1, bajas_1, c='Blue', linewidth=0.8, label=f"Mínimas {nombre_estacion_1}")
+plt.fill_between(fechas_1, altas_1, bajas_1, facecolor='Purple', alpha=0.4)
 
-#Formato del grafico
-ax.title.set_text('"Temperaturas máximas y mínimas diarias - entre sitka. y Death Valley, CA')
-ax.set_xlabel('',fontsize= 16)
-ax.set_ylabel('Temperatura (F)')
+# Graficar los datos de la segunda estación
+ax.plot(fechas_2, altas_2, c='Yellow', linewidth=0.8, label=f"Máximas {nombre_estacion_2}")
+ax.plot(fechas_2, bajas_2, c='Green', linewidth=0.8, label=f"Mínimas {nombre_estacion_2}")
+plt.fill_between(fechas_2, altas_2, bajas_2, facecolor='Grey', alpha=0.4)
+
+# Formato del gráfico
+ax.set_title(f"Temperaturas máximas y mínimas diarias - {nombre_estacion_1} y {nombre_estacion_2}")
+ax.set_xlabel('', fontsize=16)
+ax.set_ylabel('Temperatura (F)', fontsize=16)
 fig.autofmt_xdate()
 plt.tick_params(axis="both", which="major", labelsize=14)
 
+# Añadir leyenda
+ax.legend()
 
 # Mostrar el gráfico
 plt.show()
