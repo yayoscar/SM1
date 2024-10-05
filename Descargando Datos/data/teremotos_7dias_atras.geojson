@@ -1,0 +1,53 @@
+{
+    "type": "FeatureCollection",
+    "metadata": {
+        "generated": 1727378337000,
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_day.geojson",
+        "title": "USGS Significant Earthquakes, Past Day",
+        "status": 200,
+        "api": "1.10.3",
+        "count": 1
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.96,
+                "place": "12 km E of Saanichton, Canada",
+                "time": 1727348720170,
+                "updated": 1727378298266,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw62050041",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/uw62050041.geojson",
+                "felt": 2454,
+                "cdi": 3.8,
+                "mmi": 3.645,
+                "alert": "green",
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 621,
+                "net": "uw",
+                "code": "62050041",
+                "ids": ",uw62050041,us7000ngj4,",
+                "sources": ",uw,us,",
+                "types": ",dyfi,losspager,moment-tensor,origin,phase-data,shakemap,",
+                "nst": 75,
+                "dmin": 0.08658,
+                "rms": 0.13,
+                "gap": 62,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 4.0 - 12 km E of Saanichton, Canada"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.24783333333333,
+                    48.580666666666666,
+                    52.15
+                ]
+            },
+            "id": "uw62050041"
+        }
+    ]
+}
