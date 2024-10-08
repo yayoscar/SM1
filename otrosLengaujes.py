@@ -19,7 +19,7 @@ def obtener_repositorios_populares(lenguaje):
 
     #aqui necesitanmos ne procesar información de los repositorios.
     repo_dicts=response_dict['items']
-    repo_links,stars,hover_texts = [],[],[]
+    repo_links,stars,hover_texts=[],[],[]
     
     for repo_dict in repo_dicts:
         #aqui ne convertimos nombres de repositorios en enlaces activos.
