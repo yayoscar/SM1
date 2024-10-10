@@ -25,3 +25,5 @@ axs[1].set_ylabel('Cubo del número')
 
 plt.tight_layout()
 plt.show()
+
+#probando mahla
