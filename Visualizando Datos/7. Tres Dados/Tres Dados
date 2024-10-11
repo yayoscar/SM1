@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Número de lanzamientos
+num_lanzamientos = 1000  # Puedes aumentar esto si lo deseas
+
+# Lanzar tres dados de seis caras
+dados_1 = np.random.randint(1, 7, num_lanzamientos)  # Dado 1
+dados_2 = np.random.randint(1, 7, num_lanzamientos)  # Dado 2
+dados_3 = np.random.randint(1, 7, num_lanzamientos)  # Dado 3
+
+# Calcular las sumas de los resultados de los dados
+suma_dados = dados_1 + dados_2 + dados_3
+
+# Visualización de los resultados
+plt.figure(figsize=(10, 6))
+plt.hist(suma_dados, bins=range(3, 20), edgecolor='black', align='left', alpha=0.7)
+plt.title('Resultados de 1000 Lanzamientos de Tres D6')
+plt.xlabel('Suma de los Dados')
+plt.ylabel('Frecuencia')
+plt.xticks(range(3, 19))
+plt.grid(axis='y', alpha=0.75)
+plt.show()

@@ -1,0 +1,50 @@
+import random
+import matplotlib.pyplot as plt
+
+class RandomWalk:
+    def __init__(self, num_points=5000):
+        self.num_points = num_points
+
+        # Inicializa las listas para los valores de las coordenadas x e y.
+        self.x_values = [0]
+        self.y_values = [0]
+
+    def obtener_paso(self):
+        """Determina la dirección y la distancia de un paso."""
+        direction = random.choice([1, -1])  # Cambia la dirección si es necesario
+        distance = random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8])  # Distancias posibles
+        step = direction * distance
+        return step
+
+    def llenar_caminata(self):
+        """Genera la caminata aleatoria."""
+        while len(self.x_values) < self.num_points:
+            paso_x = self.obtener_paso()  # Obtener paso en x
+            paso_y = self.obtener_paso()  # Obtener paso en y
+
+            # Rechaza movimientos que no cambien de posición.
+            if paso_x == 0 and paso_y == 0:
+                continue
+
+            # Calcula las nuevas posiciones de x e y.
+            next_x = self.x_values[-1] + paso_x
+            next_y = self.y_values[-1] + paso_y
+
+            self.x_values.append(next_x)
+            self.y_values.append(next_y)
+
+# Crear una instancia de RandomWalk y generar la caminata.
+rw = RandomWalk(5000)
+rw.llenar_caminata()
+
+# Visualizar la caminata.
+plt.style.use('classic')
+fig, ax = plt.subplots(figsize=(10, 6))
+point_numbers = range(rw.num_points)
+ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+
+# Enfatizar el primer y último punto.
+ax.scatter(0, 0, c='green', edgecolors='none', s=100)  # Inicio de la caminata.
+ax.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=100)  # Final de la caminata.
+
+plt.show()
