@@ -4,17 +4,16 @@ import plotly.express as px
 from operator import itemgetter
 import plotly.io as pio
 
-# Configurar renderer para Visual Studio.
+# Configurar el renderer para Visual Studio.
 pio.renderers.default = 'browser'
 
 # Definir una función para manejar los reintentos.
 def fetch_with_retries(url, retries=3, delay=5, timeout=30):
-    
     """Realiza una solicitud a la URL con reintentos."""
     for i in range(retries):
         try:
             r = requests.get(url, timeout=timeout)
-            r.raise_for_status()
+            r.raise_for_status()  # Lanza un error si la respuesta fue un código de error.
             return r
         except requests.exceptions.RequestException as e:
             print(f"Error: {e}. Reintentando ({i + 1}/{retries}) en {delay} segundos...")
@@ -81,5 +80,3 @@ fig.update_layout(
 
 # Mostrar gráfico
 fig.show()
-
-#print ("Profe no se como se sube :c")

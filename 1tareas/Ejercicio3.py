@@ -1,24 +1,27 @@
+import pytest
 import requests
-import plotly.express as px
 
-# Realizar una llamada a la API y verificar la respuesta.
-url = "https://api.github.com/search/repositories"
-url += "?q=language: python+sort:stars+stars:>10000"
-headers = {"Accept": "application/vnd.github.v3+json"}
-r = requests.get(url, headers=headers)
-print(f"Código de estado: {r.status_code}")
+# URL de la API de GitHub para obtener repositorios de Python.
+url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 
-# Procesar los resultados generales.
-response_dict = r.json()
-print(f"Resultados completos: {not response_dict['incomplete_results']}")
+# Función para obtener los datos de la API
+def get_api_data(url):
+    response = requests.get(url)
+    return response
 
-# Procesar información de los repositorios.
-repo_dicts = response_dict['items']
-repo_names, stars = [],[]
-for repo_dict in repo_dicts:
-    repo_names.append(repo_dict['name'])
-    stars.append(repo_dict['stargazers_count'])
+# Prueba para asegurar que el código de estado sea 200.
+def test_status_code():
+    response = get_api_data(url)
+    assert response.status_code == 200, "La API no respondió con el código de estado 200."
 
-# Crear visualización.
-fig = px.bar (x=repo_names, y=stars)
-fig.show()
+# Prueba para asegurar que se devuelvan al menos 1000 repositorios.
+def test_total_repositories():
+    response = get_api_data(url)
+    response_dict = response.json()
+    assert response_dict['total_count'] > 1000, "El número total de repositorios de Python debería ser mayor que 1000."
+
+# Prueba para asegurar que se devuelvan al menos 30 repositorios (por defecto devuelve 30).
+def test_items_length():
+    response = get_api_data(url)
+    response_dict = response.json()
+    assert len(response_dict['items']) == 30, "El número de repositorios devueltos no es 30."
